@@ -1,0 +1,272 @@
+[
+    {
+        "name": "title",
+        "type": "STRING",
+        "mode": "NULLABLE"
+    },
+    {
+        "name": "appId",
+        "type": "STRING",
+        "mode": "NULLABLE"
+    },
+    {
+        "name": "url",
+        "type": "STRING",
+        "mode": "NULLABLE"
+    },
+    {
+        "name": "description",
+        "type": "STRING",
+        "mode": "NULLABLE"
+    },
+    {
+        "name": "descriptionHTML",
+        "type": "STRING",
+        "mode": "NULLABLE"
+    },
+    {
+        "name": "summary",
+        "type": "STRING",
+        "mode": "NULLABLE"
+    },
+    {
+        "name": "summaryHTML",
+        "type": "STRING",
+        "mode": "NULLABLE"
+    },
+    {
+        "name": "installs",
+        "type": "STRING",
+        "mode": "NULLABLE"
+    },
+    {
+        "name": "minInstalls",
+        "type": "INTEGER",
+        "mode": "NULLABLE"
+    },
+    {
+        "name": "score",
+        "type": "FLOAT",
+        "mode": "NULLABLE"
+    },
+    {
+        "name": "ratings",
+        "type": "INTEGER",
+        "mode": "NULLABLE"
+    },
+    {
+        "name": "reviews",
+        "type": "INTEGER",
+        "mode": "NULLABLE"
+    },
+    {
+        "name": "originalPrice",
+        "type": "STRING",
+        "mode": "NULLABLE"
+    },
+    {
+        "name": "sale",
+        "type": "BOOLEAN",
+        "mode": "NULLABLE"
+    },
+    {
+        "name": "saleText",
+        "type": "STRING",
+        "mode": "NULLABLE"
+    },
+    {
+        "name": "saleTime",
+        "type": "STRING",
+        "mode": "NULLABLE"
+    },
+    {
+        "name": "histogram",
+        "type": "INTEGER",
+        "mode": "repeated"
+    },
+    {
+        "name": "price",
+        "type": "INTEGER",
+        "mode": "NULLABLE"
+    },
+    {
+        "name": "free",
+        "type": "BOOLEAN",
+        "mode": "NULLABLE"
+    },
+    {
+        "name": "currency",
+        "type": "STRING",
+        "mode": "NULLABLE"
+    },
+    {
+        "name": "offersIAP",
+        "type": "BOOLEAN",
+        "mode": "NULLABLE"
+    },
+    {
+        "name": "inAppProductPrice",
+        "type": "STRING",
+        "mode": "NULLABLE"
+    },
+    {
+        "name": "editorsChoice",
+        "type": "BOOLEAN",
+        "mode": "NULLABLE"
+    },
+    {
+        "name": "size",
+        "type": "STRING",
+        "mode": "NULLABLE"
+    },
+    {
+        "name": "androidVersion",
+        "type": "STRING",
+        "mode": "NULLABLE"
+    },
+    {
+        "name": "androidVersionText",
+        "type": "STRING",
+        "mode": "NULLABLE"
+    },
+    {
+        "name": "developer",
+        "type": "STRING",
+        "mode": "NULLABLE"
+    },
+    {
+        "name": "developerId",
+        "type": "STRING",
+        "mode": "NULLABLE"
+    },
+    {
+        "name": "developerEmail",
+        "type": "STRING",
+        "mode": "NULLABLE"
+    },
+    {
+        "name": "developerWebsite",
+        "type": "STRING",
+        "mode": "NULLABLE"
+    },
+    {
+        "name": "developerAddress",
+        "type": "STRING",
+        "mode": "NULLABLE"
+    },
+    {
+        "name": "privacyPolicy",
+        "type": "STRING",
+        "mode": "NULLABLE"
+    },
+    {
+        "name": "developerInternalID",
+        "type": "STRING",
+        "mode": "NULLABLE"
+    },
+    {
+        "name": "genre",
+        "type": "STRING",
+        "mode": "NULLABLE"
+    },
+    {
+        "name": "genreId",
+        "type": "STRING",
+        "mode": "NULLABLE"
+    },
+    {
+        "name": "familyGenre",
+        "type": "STRING",
+        "mode": "NULLABLE"
+    },
+    {
+        "name": "familyGenreId",
+        "type": "STRING",
+        "mode": "NULLABLE"
+    },
+    {
+        "name": "icon",
+        "type": "STRING",
+        "mode": "NULLABLE"
+    },
+    {
+        "name": "headerImage",
+        "type": "STRING",
+        "mode": "NULLABLE"
+    },
+    {
+        "name": "screenshots",
+        "type": "STRING",
+        "mode": "repeated"
+    },
+    {
+        "name": "video",
+        "type": "STRING",
+        "mode": "NULLABLE"
+    },
+    {
+        "name": "videoImage",
+        "type": "STRING",
+        "mode": "NULLABLE"
+    },
+    {
+        "name": "contentRating",
+        "type": "STRING",
+        "mode": "NULLABLE"
+    },
+    {
+        "name": "contentRatingDescription",
+        "type": "STRING",
+        "mode": "NULLABLE"
+    },
+    {
+        "name": "adSupported",
+        "type": "BOOLEAN",
+        "mode": "NULLABLE"
+    },
+    {
+        "name": "released",
+        "type": "STRING",
+        "mode": "NULLABLE"
+    },
+    {
+        "name": "updated",
+        "type": "TIMESTAMP",
+        "mode": "NULLABLE"
+    },
+    {
+        "name": "version",
+        "type": "STRING",
+        "mode": "NULLABLE"
+    },
+    {
+        "name": "recentChanges",
+        "type": "STRING",
+        "mode": "NULLABLE"
+    },
+    {
+        "name": "recentChangesHTML",
+        "type": "STRING",
+        "mode": "NULLABLE"
+    },
+    {
+        "name": "comments",
+        "type": "STRING",
+        "mode": "repeated"
+    },
+    {
+        "name": "similarApps",
+        "type": "STRING",
+        "mode": "repeated"
+    },
+    {
+        "name": "moreByDeveloper",
+        "type": "STRING",
+        "mode": "repeated"
+    },
+    {
+        "name": "dag_execution_date",
+        "type": "TIMESTAMP",
+        "mode": "NULLABLE"
+    }
+]

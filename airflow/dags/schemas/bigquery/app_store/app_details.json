@@ -1,0 +1,147 @@
+[
+	{
+		"name": "id",
+		"type": "INTEGER",
+        "mode": "NULLABLE"
+	},
+	{
+		"name": "appId",
+		"type": "STRING",
+        "mode": "NULLABLE"
+	},
+	{
+		"name": "title",
+		"type": "STRING",
+        "mode": "NULLABLE"
+	},
+	{
+		"name": "url",
+		"type": "STRING",
+        "mode": "NULLABLE"
+	},
+	{
+		"name": "description",
+		"type": "STRING",
+        "mode": "NULLABLE"
+	},
+	{
+		"name": "icon",
+		"type": "STRING",
+        "mode": "NULLABLE"
+	},
+	{
+		"name": "genres",
+		"type": "STRING",
+		"mode": "REPEATED"
+	},
+	{
+		"name": "genreIds",
+		"type": "STRING",
+		"mode": "REPEATED"
+	},
+	{
+		"name": "primaryGenre",
+		"type": "STRING",
+        "mode": "NULLABLE"
+	},
+	{
+		"name": "primaryGenreId",
+		"type": "INTEGER",
+        "mode": "NULLABLE"
+	},
+	{
+		"name": "contentRating",
+		"type": "STRING",
+        "mode": "NULLABLE"
+	},
+	{
+		"name": "size",
+		"type": "STRING",
+        "mode": "NULLABLE"
+	},
+	{
+		"name": "requiredOsVersion",
+		"type": "STRING",
+        "mode": "NULLABLE"
+	},
+	{
+		"name": "released",
+		"type": "TIMESTAMP",
+        "mode": "NULLABLE"
+	},
+	{
+		"name": "updated",
+		"type": "TIMESTAMP",
+        "mode": "NULLABLE"
+	},
+	{
+		"name": "releaseNotes",
+		"type": "STRING",
+        "mode": "NULLABLE"
+	},
+	{
+		"name": "version",
+		"type": "STRING",
+        "mode": "NULLABLE"
+	},
+	{
+		"name": "price",
+		"type": "INTEGER",
+        "mode": "NULLABLE"
+	},
+	{
+		"name": "currency",
+		"type": "STRING",
+        "mode": "NULLABLE"
+	},
+	{
+		"name": "free",
+		"type": "BOOLEAN",
+        "mode": "NULLABLE"
+	},
+	{
+		"name": "developerId",
+		"type": "INTEGER",
+        "mode": "NULLABLE"
+	},
+	{
+		"name": "developer",
+		"type": "STRING",
+        "mode": "NULLABLE"
+	},
+	{
+		"name": "developerUrl",
+		"type": "STRING",
+        "mode": "NULLABLE"
+	},
+	{
+		"name": "developerWebsite",
+		"type": "STRING",
+        "mode": "NULLABLE"
+	},
+	{
+		"name": "score",
+		"type": "FLOAT",
+        "mode": "NULLABLE"
+	},
+	{
+		"name": "reviews",
+		"type": "INTEGER",
+        "mode": "NULLABLE"
+	},
+	{
+		"name": "currentVersionScore",
+		"type": "FLOAT",
+        "mode": "NULLABLE"
+	},
+	{
+		"name": "currentVersionReviews",
+		"type": "INTEGER",
+        "mode": "NULLABLE"
+	},
+	{
+		"name": "screenshots",
+		"type": "STRING",
+		"mode": "REPEATED"
+	}
+]

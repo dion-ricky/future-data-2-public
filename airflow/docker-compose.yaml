@@ -1,0 +1,93 @@
+# Configured for LocalExecutor
+
+version: "3"
+x-airflow-common:
+  &airflow-common
+
+  #image: ${AIRFLOW_IMAGE_NAME:-apache/airflow:1.10.12-python3.6}
+  build: .
+  environment:
+    &airflow-common-env
+    AIRFLOW_VAR_GCS_BUCKET: airflow-sapporo
+    AIRFLOW_VAR_TEMP_RAW_DATA: /opt/temp
+    AIRFLOW_CONN_GCP_CONN: google-cloud-platform://?extra__jdbc__drv_path=&extra__jdbc__drv_clsname=&extra__google_cloud_platform__project=future-data-track-1&extra__google_cloud_platform__key_path=%2Fopt%2Fcredentials%2Ffuture-data-track-1-sapporo.json&extra__google_cloud_platform__keyfile_dict=&extra__google_cloud_platform__scope=&extra__google_cloud_platform__num_retries=&extra__grpc__auth_type=&extra__grpc__credentials_pem_file=&extra__grpc__scopes=&extra__yandexcloud__service_account_json=&extra__yandexcloud__service_account_json_path=&extra__yandexcloud__oauth=&extra__yandexcloud__public_ssh_key=&extra__yandexcloud__folder_id=
+    AIRFLOW_CONN_ITUNES_SCRAPER_CONN: google-cloud-platform://?extra__jdbc__drv_path=&extra__jdbc__drv_clsname=&extra__google_cloud_platform__project=future-itunes-scraper&extra__google_cloud_platform__key_path=%2Fopt%2Fcredentials%2Ffuture-itunes-scraper-sapporo.json&extra__google_cloud_platform__keyfile_dict=&extra__google_cloud_platform__scope=&extra__google_cloud_platform__num_retries=&extra__grpc__auth_type=&extra__grpc__credentials_pem_file=&extra__grpc__scopes=&extra__yandexcloud__service_account_json=&extra__yandexcloud__service_account_json_path=&extra__yandexcloud__oauth=&extra__yandexcloud__public_ssh_key=&extra__yandexcloud__folder_id=
+    AIRFLOW__CORE__EXECUTOR: LocalExecutor
+    AIRFLOW__CORE__SQL_ALCHEMY_CONN: postgresql+psycopg2://airflow:airflow@postgres/airflow
+    AIRFLOW__CORE__DAGS_ARE_PAUSED_AT_CREATION: 'true'
+    AIRFLOW__CORE__LOAD_EXAMPLES: 'false'
+    AIRFLOW__CORE__FERNET_KEY: ''
+    AIRFLOW__SCHEDULER__MIN_FILE_PROCESS_INTERVAL: 60
+    AIRFLOW__WEBSERVER__WORKERS: 2
+    AIRFLOW__WEBSERVER__WORKER_REFRESH_INTERVAL: 1800
+    AIRFLOW__WEBSERVER__WEB_SERVER_WORKER_TIMEOUT: 300
+  volumes:
+    - ./dags:/opt/airflow/dags
+    - ./logs:/opt/airflow/logs
+    - ./plugins:/opt/airflow/plugins
+    - ./credentials:/opt/credentials
+    - ./temp:/opt/temp
+    - ./datasets:/opt/datasets
+  user: "${AIRFLOW_UID:-50000}:${AIRFLOW_GID:-0}"
+  depends_on:
+    &airflow-common-depends-on
+    postgres:
+      condition: service_healthy
+
+services:
+  postgres:
+    image: postgres:13
+    environment:
+      POSTGRES_USER: airflow
+      POSTGRES_PASSWORD: airflow
+      POSTGRES_DB: airflow
+    volumes:
+      - ./dbdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD", "pg_isready", "-U", "airflow"]
+      interval: 10s
+      retries: 5
+    restart: unless-stopped
+
+  airflow-webserver:
+    <<: *airflow-common
+    command: webserver
+    ports:
+      - 8090:8080
+    healthcheck:
+      test: ["CMD", "curl", "--fail", "http://localhost:8080/health"]
+      interval: 10s
+      timeout: 10s
+      retries: 5
+    restart: unless-stopped
+    depends_on:
+      <<: *airflow-common-depends-on
+      airflow-init:
+        condition: service_completed_successfully
+
+  airflow-scheduler:
+    <<: *airflow-common
+    command: scheduler
+    healthcheck:
+      test: ["CMD-SHELL", 'airflow jobs check --job-type SchedulerJob --hostname "$${HOSTNAME}"']
+      interval: 10s
+      timeout: 10s
+      retries: 5
+    restart: unless-stopped
+    depends_on:
+      <<: *airflow-common-depends-on
+      airflow-init:
+        condition: service_completed_successfully
+
+  airflow-init:
+    <<: *airflow-common
+    command:
+      - initdb
+    environment:
+      <<: *airflow-common-env
+      _AIRFLOW_DB_UPGRADE: 'true'
+      _AIRFLOW_WWW_USER_CREATE: 'true'
+      _AIRFLOW_WWW_USER_USERNAME: ${_AIRFLOW_WWW_USER_USERNAME:-airflow}
+      _AIRFLOW_WWW_USER_PASSWORD: ${_AIRFLOW_WWW_USER_PASSWORD:-airflow}
+    volumes:
+      - .:/sources

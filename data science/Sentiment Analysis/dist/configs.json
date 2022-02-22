@@ -1,0 +1,56 @@
+[
+    {
+        "name": "Decission Tree",
+        "shortname": "DT",
+        "version": "4.0.E",
+        "exported_name": "DT_4.0.E"
+    },
+    {
+        "name": "Random Forest",
+        "shortname": "RF",
+        "version": "4.0.E",
+        "exported_name": "RF_4.0.E"
+    },
+    {
+        "name": "Logistic Regression",
+        "shortname": "LR",
+        "version": "4.0.E",
+        "exported_name": "LR_4.0.E"
+    },
+    {
+        "name": "Naive Bayes",
+        "shortname": "NB",
+        "version": "4.0.E",
+        "exported_name": "NB_4.0.E"
+    },
+    {
+        "name": "Nearest Centroid",
+        "shortname": "NC",
+        "version": "4.0.E",
+        "exported_name": "NC_4.0.E"
+    },
+    {
+        "name": "Support Vector Machine",
+        "shortname": "SVM",
+        "version": "4.0.E",
+        "exported_name": "SVM_4.0.E"
+    },
+    {
+        "name": "K Nearest Neighbor",
+        "shortname": "KNN",
+        "version": "4.0.E",
+        "exported_name": "KNN_4.0.E"
+    },
+    {
+        "name": "Long Short-term Memory",
+        "shortname": "LSTM",
+        "version": "4.0.E",
+        "exported_name": "LSTM_4.0.E"
+    },
+    {
+        "name": "Convolutional Neural Network",
+        "shortname": "CNN",
+        "version": "5.0.E",
+        "exported_name": "CNN_5.0.E"
+    }
+]

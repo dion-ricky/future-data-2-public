@@ -1,0 +1,57 @@
+[
+    {
+        "name": "reviewId",
+        "type": "STRING",
+        "mode": "NULLABLE"
+    },
+    {
+        "name": "userName",
+        "type": "STRING",
+        "mode": "NULLABLE"
+    },
+    {
+        "name": "userImage",
+        "type": "STRING",
+        "mode": "NULLABLE"
+    },
+    {
+        "name": "content",
+        "type": "STRING",
+        "mode": "NULLABLE"
+    },
+    {
+        "name": "score",
+        "type": "INTEGER",
+        "mode": "NULLABLE"
+    },
+    {
+        "name": "thumbsUpCount",
+        "type": "INTEGER",
+        "mode": "NULLABLE"
+    },
+    {
+        "name": "reviewCreatedVersion",
+        "type": "STRING",
+        "mode": "NULLABLE"
+    },
+    {
+        "name": "at",
+        "type": "TIMESTAMP",
+        "mode": "NULLABLE"
+    },
+    {
+        "name": "replyContent",
+        "type": "STRING",
+        "mode": "NULLABLE"
+    },
+    {
+        "name": "repliedAt",
+        "type": "TIMESTAMP",
+        "mode": "NULLABLE"
+    },
+    {
+        "name": "dag_execution_date",
+        "type": "TIMESTAMP",
+        "mode": "NULLABLE"
+    }
+]

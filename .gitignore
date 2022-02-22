@@ -1,0 +1,11 @@
+airflow/temp
+airflow/logs
+**.pyc
+**/__pycache__
+env
+venv
+test*
+dbdata
+*.twbr
+.vscode
+ignore

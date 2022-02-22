@@ -1,0 +1,72 @@
+[
+	{
+		"name": "date_key",
+		"type": "INTEGER",
+        "mode": "NULLABLE"
+	},
+	{
+		"name": "full_date",
+		"type": "DATE",
+        "mode": "NULLABLE"
+	},
+	{
+		"name": "day_of_week",
+		"type": "INTEGER",
+        "mode": "NULLABLE"
+	},
+	{
+		"name": "date",
+		"type": "INTEGER",
+        "mode": "NULLABLE"
+	},
+	{
+		"name": "day_name",
+		"type": "STRING",
+        "mode": "NULLABLE"
+	},
+	{
+		"name": "day_abbrev",
+		"type": "STRING",
+        "mode": "NULLABLE"
+	},
+	{
+		"name": "weekday_flag",
+		"type": "BOOLEAN",
+        "mode": "NULLABLE"
+	},
+	{
+		"name": "week_num_in_year",
+		"type": "INTEGER",
+        "mode": "NULLABLE"
+	},
+	{
+		"name": "month",
+		"type": "INTEGER",
+        "mode": "NULLABLE"
+	},
+	{
+		"name": "month_name",
+		"type": "STRING",
+        "mode": "NULLABLE"
+	},
+	{
+		"name": "month_abbrev",
+		"type": "STRING",
+        "mode": "NULLABLE"
+	},
+	{
+		"name": "quarter",
+		"type": "INTEGER",
+        "mode": "NULLABLE"
+	},
+	{
+		"name": "year",
+		"type": "INTEGER",
+        "mode": "NULLABLE"
+	},
+	{
+		"name": "yearmo",
+		"type": "INTEGER",
+        "mode": "NULLABLE"
+	}
+]

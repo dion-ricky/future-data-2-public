@@ -1,0 +1,37 @@
+[
+	{
+		"name": "time_key",
+		"type": "INTEGER",
+        "mode": "NULLABLE"
+	},
+	{
+		"name": "time_id",
+		"type": "TIME",
+        "mode": "NULLABLE"
+	},
+	{
+		"name": "hour",
+		"type": "INTEGER",
+        "mode": "NULLABLE"
+	},
+	{
+		"name": "minute",
+		"type": "INTEGER",
+        "mode": "NULLABLE"
+	},
+	{
+		"name": "second",
+		"type": "INTEGER",
+        "mode": "NULLABLE"
+	},
+	{
+		"name": "meridiem",
+		"type": "STRING",
+        "mode": "NULLABLE"
+	},
+	{
+		"name": "time_of_day",
+		"type": "STRING",
+        "mode": "NULLABLE"
+	}
+]

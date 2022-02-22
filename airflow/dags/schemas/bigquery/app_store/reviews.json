@@ -1,0 +1,47 @@
+[
+	{
+		"name": "id",
+		"type": "STRING",
+        "mode": "NULLABLE"
+	},
+	{
+		"name": "userName",
+		"type": "STRING",
+		"mode": "NULLABLE"
+	},
+	{
+		"name": "userUrl",
+		"type": "STRING",
+		"mode": "NULLABLE"
+	},
+	{
+		"name": "version",
+		"type": "STRING",
+		"mode": "NULLABLE"
+	},
+	{
+		"name": "score",
+		"type": "INTEGER",
+		"mode": "NULLABLE"
+	},
+	{
+		"name": "title",
+		"type": "STRING",
+		"mode": "NULLABLE"
+	},
+	{
+		"name": "text",
+		"type": "STRING",
+        "mode": "NULLABLE"
+	},
+	{
+		"name": "url",
+		"type": "STRING",
+        "mode": "NULLABLE"
+	},
+	{
+		"name": "updated",
+		"type": "TIMESTAMP",
+        "mode": "NULLABLE"
+	}
+]

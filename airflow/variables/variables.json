@@ -1,0 +1,5 @@
+{
+    "gcs_bucket": "future_data_raw",
+    "temp_raw_data": "/opt/temp",
+    "itunes_scraper_bucket": "future-itunes-scraper.appspot.com"
+}
